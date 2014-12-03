@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Software Copyright Notice
+  ~
+  ~ Copyright  2004-2013 MXit Lifestyle Development Company (Pty) Ltd.
+  ~ All rights are reserved
+  ~
+  ~ Copyright exists in this computer program and it is protected by
+  ~ copyright law and by international treaties. The unauthorised use,
+  ~ reproduction or distribution of this computer program constitute
+  ~ acts of copyright infringement and may result in civil and criminal
+  ~ penalties. Any infringement will be prosecuted to the maximum extent
+  ~ possible.
+  ~
+  ~ MXit Lifestyle Development Company (Pty) Ltd chooses the following
+  ~ address for delivery of all legal proceedings and notices:
+  ~   Riesling House,
+  ~   Brandwacht Office Park,
+  ~   Trumali Road,
+  ~   Stellenbosch,
+  ~   7600,
+  ~   South Africa.
+  ~
+  ~ The following computer programs, or portions thereof, are used in
+  ~ this computer program under licenses obtained from third parties.
+  ~ You are obliged to familiarise yourself with the contents of those
+  ~ licenses.
+  ~
+  ~ Bouncy Castle 1.3.0 [http://www.bouncycastle.org/]
+  ~ ZXing 1.6 [http://code.google.com/p/zxing/]
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/make_friends_card" />
+</selector>

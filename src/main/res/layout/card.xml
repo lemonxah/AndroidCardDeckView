@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_gravity="center|top"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher"
+        android:layout_height="200dp" />
+    <ImageView
+        android:id="@+id/skip"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/rotated_skip_label"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/invite"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:src="@drawable/rotated_invite_label"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_below="@+id/avatar"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text here"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/test_id"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="20sp"/>
+        </LinearLayout>
+</RelativeLayout>

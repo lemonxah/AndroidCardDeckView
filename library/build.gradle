@@ -1,0 +1,51 @@
+
+['android-library', 'jp.leafytree.android-scala', 'maven'].each { it ->
+    apply plugin: it
+}
+repositories {
+    mavenCentral()
+}
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.1'
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    sourceSets {
+        main {
+            scala {
+                srcDir "src/main/scala"
+            }
+        }
+
+        androidTest {
+            scala {
+                srcDir "src/androidTest/scala"
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            runProguard true // required
+            proguardFile file("proguard-rules.txt")
+        }
+
+        release {
+            runProguard true
+            proguardFile file("proguard-rules.txt")
+        }
+    }
+    dexOptions {
+        incremental true
+    }
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.4'
+}

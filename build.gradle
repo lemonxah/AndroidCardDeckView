@@ -1,0 +1,62 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.14.1'
+        classpath 'jp.leafytree.gradle:gradle-android-scala-plugin:1.2.1'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'jp.leafytree.android-scala'
+
+repositories {
+    maven { url 'http://svn.za.mxitlifestyle.local:8081/nexus/content/groups/public' }
+    mavenCentral()
+}
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+    defaultConfig {
+        applicationId 'com.lemonxah.decktest'
+        minSdkVersion 9
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            runProguard true // required
+            proguardFile file("proguard-rules.txt")
+        }
+
+        release {
+            runProguard true
+            proguardFile file("proguard-rules.txt")
+        }
+    }
+    dexOptions {
+        incremental true
+    }
+    sourceSets {
+        main {
+            scala {
+                srcDir "src/main/scala"
+            }
+        }
+
+        androidTest {
+            scala {
+                srcDir "src/androidTest/scala"
+            }
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile project(':library')
+    compile 'org.scala-lang:scala-library:2.11.4'
+}
