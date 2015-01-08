@@ -7,7 +7,7 @@ repositories {
 }
 android {
     compileSdkVersion 21
-    buildToolsVersion '21.1.1'
+    buildToolsVersion '21.1.2'
 
     defaultConfig {
         minSdkVersion 9
@@ -30,17 +30,6 @@ android {
         }
     }
 
-    buildTypes {
-        debug {
-            runProguard true // required
-            proguardFile file("proguard-rules.txt")
-        }
-
-        release {
-            runProguard true
-            proguardFile file("proguard-rules.txt")
-        }
-    }
     dexOptions {
         incremental true
     }

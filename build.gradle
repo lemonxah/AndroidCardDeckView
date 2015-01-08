@@ -3,8 +3,8 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.14.1'
-        classpath 'jp.leafytree.gradle:gradle-android-scala-plugin:1.2.1'
+        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'jp.leafytree.gradle:gradle-android-scala-plugin:1.3.1'
     }
 }
 
@@ -17,24 +17,13 @@ repositories {
 }
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.1.1"
+    buildToolsVersion "21.1.2"
     defaultConfig {
         applicationId 'com.lemonxah.decktest'
         minSdkVersion 9
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
-    }
-    buildTypes {
-        debug {
-            runProguard true // required
-            proguardFile file("proguard-rules.txt")
-        }
-
-        release {
-            runProguard true
-            proguardFile file("proguard-rules.txt")
-        }
     }
     dexOptions {
         incremental true
